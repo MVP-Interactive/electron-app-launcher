@@ -20,6 +20,14 @@ module.exports = {
         use: "ts-loader",
         exclude: /node_modules/,
       },
+      {
+        test: /\.(css|postcss)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader'
+        ],
+      },
     ],
   },
   plugins: [
@@ -28,8 +36,11 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9000,
+    hot: true,
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
   },
 };

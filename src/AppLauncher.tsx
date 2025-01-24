@@ -24,9 +24,9 @@ const AppLauncher = () => {
   const [selectedApp, setSelectedApp] = useState<string | null>(null)
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <h1 className="text-3xl font-bold text-center mb-8">App Launcher</h1>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    <div className="min-h-screen p-8">
+      <h1 className="text-3xl font-bold text-center text-white mb-8 select-none">App Launcher</h1>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 min-h-[50vh]">
         {apps.map((app) => (
           <motion.div
             key={app.name}
@@ -37,12 +37,12 @@ const AppLauncher = () => {
           >
             <div className="flex flex-col items-center justify-center h-full">
               <div className="text-white mb-2">{app.icon}</div>
-              <span className="text-white text-sm font-medium">{app.name}</span>
+              <span className="text-white text-sm font-medium select-none">{app.name}</span>
             </div>
           </motion.div>
         ))}
       </div>
-      {selectedApp && <div className="mt-8 text-center text-lg font-semibold">You clicked on: {selectedApp}</div>}
+      {selectedApp && <div className="mt-8 text-center text-white text-lg font-semibold">Launching: {selectedApp}</div>}
     </div>
   )
 };

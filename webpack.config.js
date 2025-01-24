@@ -21,11 +21,26 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(css|postcss)$/,
+        test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader',
-          'postcss-loader'
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  require('tailwindcss'),
+                  require('autoprefixer'),
+                ],
+              },
+            },
+          },
         ],
       },
     ],

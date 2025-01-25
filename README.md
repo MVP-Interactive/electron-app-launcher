@@ -56,4 +56,4 @@ The App Launcher provides a centralized interface for managing and launching you
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the ISC License - see the LICENSE file for details. 

@@ -1,21 +1,42 @@
 {
-  "name": "electron-app-launcher",
+  "name": "app-launcher",
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "build": "webpack",
-    "dev": "concurrently \"cross-env NODE_ENV=development webpack serve --mode development\" \"wait-on http://localhost:9000 && cross-env NODE_ENV=development electron .\""
+    "dev": "concurrently \"cross-env NODE_ENV=development webpack serve --mode development\" \"wait-on http://localhost:9000 && cross-env NODE_ENV=development electron .\"",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.mvp-interactive.app-launcher",
+    "productName": "App Launcher",
+    "directories": {
+      "output": "dist/bin"
+    },
+    "files": [
+      "main.js",
+      "package.json",
+      "dist/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "description": "",
+  "description": "App Launcher",
   "dependencies": {
     "@emotion/is-prop-valid": "^1.3.1",
     "@tailwindcss/postcss": "^4.0.0",
-    "electron": "^34.0.1",
     "framer-motion": "^12.0.5",
     "lucide-react": "^0.474.0",
     "react": "^19.0.0",
@@ -28,6 +49,8 @@
     "concurrently": "^9.1.2",
     "cross-env": "^7.0.3",
     "css-loader": "^7.1.2",
+    "electron": "^34.0.1",
+    "electron-builder": "^25.1.8",
     "html-webpack-plugin": "^5.6.3",
     "postcss": "^8.4.31",
     "postcss-loader": "^8.1.1",

@@ -1,0 +1,14 @@
+{
+  "executables": {
+    "Obsidian": {
+      "win32": "C:\\Users\\Roman Calderon\\AppData\\Local\\Programs\\obsidian\\Obsidian.exe",
+      "linux": "/usr/bin/obsidian",
+      "darwin": "/Applications/Obsidian.app"
+    },
+    "Notepad++": {
+      "win32": "C:\\Program Files\\Notepad++\\notepad++.exe",
+      "linux": "/usr/bin/notepad++",
+      "darwin": "/Applications/Notepad++.app"
+    }
+  }
+}

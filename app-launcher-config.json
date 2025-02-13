@@ -1,14 +1,14 @@
 {
   "executables": {
-    "Obsidian": {
-      "win32": "C:\\Users\\Roman Calderon\\AppData\\Local\\Programs\\obsidian\\Obsidian.exe",
-      "linux": "/usr/bin/obsidian",
-      "darwin": "/Applications/Obsidian.app"
+    "Firefox": {
+      "win32": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+      "linux": "/usr/bin/firefox",
+      "darwin": "/Applications/Firefox.app"
     },
-    "Notepad++": {
-      "win32": "C:\\Program Files\\Notepad++\\notepad++.exe",
-      "linux": "/usr/bin/notepad++",
-      "darwin": "/Applications/Notepad++.app"
+    "Figma": {
+      "win32": "C:\\Users\\mvpinteractive\\AppData\\Local\\Figma\\Figma.exe",
+      "linux": "/usr/bin/figma",
+      "darwin": "/Applications/Figma.app"
     }
   }
 }

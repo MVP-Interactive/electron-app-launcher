@@ -40,6 +40,25 @@ npm run dev
 
 ## Usage
 
+The App Launcher uses `app-launcher-config.json` to display and manage the respective apps. Here is an example config file for managing Firefox and Figma desktop:
+
+```json
+{
+  "executables": {
+    "Firefox": {
+      "win32": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+      "linux": "/usr/bin/firefox",
+      "darwin": "/Applications/Firefox.app"
+    },
+    "Figma": {
+      "win32": "C:\\Users\\mvpinteractive\\AppData\\Local\\Figma\\Figma.exe",
+      "linux": "/usr/bin/figma",
+      "darwin": "/Applications/Figma.app"
+    }
+  }
+}
+```
+
 The App Launcher provides a centralized interface for managing and launching your applications:
 
 - Displays applications in a clean, grid-based layout

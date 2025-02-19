@@ -53,7 +53,11 @@ class ExecutableLauncher {
     }
 
     return new Promise((resolve, reject) => {
-      exec(`"${executablePath}" ${args.join(' ')}`, (error, stdout, stderr) => {
+      const command = platform === 'darwin' && executablePath.endsWith('.app')
+        ? `open "${executablePath}" ${args.join(' ')}`
+        : `"${executablePath}" ${args.join(' ')}`;
+
+      exec(command, (error, stdout, stderr) => {
         if (error) {
           reject(error);
           return;
